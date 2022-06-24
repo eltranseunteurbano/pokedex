@@ -11,4 +11,14 @@ const getPokemonsAPI = async () => {
   }
 }
 
-export { getPokemonsAPI }
+const getPokemonDetailAPI = async (url) => {
+  try {
+    const response = await fetch(url);
+    const result = await response.json()
+    return result
+  } catch (error) {
+    throw error
+  }
+}
+
+export { getPokemonsAPI, getPokemonDetailAPI }
