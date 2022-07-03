@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Image } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
-import { ACCOUNT, POKEDEX, FAVORITE } from "../routes";
+import { MAIN_ROUTES, FAVORITE, ACCOUNT } from "../routes";
 import {
   AccountNavigation,
   PokedexNavigation,
@@ -13,11 +13,11 @@ const Navigation = () => {
 
   return (
     <Tab.Navigator
-      initialRouteName={POKEDEX.path}
+      initialRouteName={MAIN_ROUTES.pokedex}
       screenOptions={{ headerShown: false }}
     >
       <Tab.Screen
-        name={FAVORITE.path}
+        name={MAIN_ROUTES.favorite}
         component={FavoriteNavigation}
         options={{
           tabBarLabel: FAVORITE.label,
@@ -27,7 +27,7 @@ const Navigation = () => {
         }}
       />
       <Tab.Screen
-        name={POKEDEX.path}
+        name={MAIN_ROUTES.pokedex}
         component={PokedexNavigation}
         options={{
           tabBarLabel: "",
@@ -35,7 +35,7 @@ const Navigation = () => {
         }}
       />
       <Tab.Screen
-        name={ACCOUNT.path}
+        name={MAIN_ROUTES.account}
         component={AccountNavigation}
         options={{
           tabBarLabel: ACCOUNT.label,
