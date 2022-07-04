@@ -1,20 +1,17 @@
-import { StyleSheet, Text, FlatList } from "react-native";
+import { StyleSheet, FlatList } from "react-native";
+import PokemonCard from "./PokemonCard";
 
 const PokemonList = (props) => {
   const { pokemons } = props;
+  console.log( { pokemons })
 
   return (
-    // <FlatList>
-    //   {pokemons.map(({ name, id }) => (
-    //     <Text key={id}>{name}</Text>
-    //   ))}
-    // </FlatList>
     <FlatList
       data={pokemons}
       numColumns={2}
       showsVerticalScrollIndicator={false}
       keyExtractor={({ id }) => `${id}`}
-      renderItem={({ item }) => <Text>{item.name}</Text>}
+      renderItem={({ item: { imagen, name, type, id } }) => <PokemonCard img={imagen} name={name} type={type} id={id} />}
       contentContainerStyle={styles.flatListContainer}
     />
   );
