@@ -10,7 +10,7 @@ const PokedexNavigation = () => {
       <Stack.Screen
         name={POKEDEX.path}
         component={PokedexScreen}
-        options={{ title: POKEDEX.label }}
+        options={{ title: POKEDEX.label, headerShown: false }}
       />
       <Stack.Screen
         name={POKEDEX_POKEMON.path}
