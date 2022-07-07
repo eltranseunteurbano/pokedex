@@ -1,12 +1,21 @@
-import { Text, Image, StyleSheet, Pressable, View } from "react-native";
+import {
+  Text,
+  Image,
+  StyleSheet,
+  Pressable,
+  View,
+  ToastAndroid,
+} from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { POKEDEX_POKEMON } from "../routes";
 import getColorByPokemonType from "../utils/getColorByPokemonType";
 
 const PokemonCard = (props) => {
   const { name, img, type, id, order } = props;
+  const navigation = useNavigation();
 
   const goToPokemon = (id) => {
-    console.log(`${POKEDEX_POKEMON.path}/${id}`);
+    navigation.navigate(POKEDEX_POKEMON.path, { id });
   };
 
   return (

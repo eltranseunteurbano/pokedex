@@ -1,8 +1,8 @@
 const API = "https://pokeapi.co/api/v2/"
-const getPokemonsAPI = async () => {
+const getPokemonsAPI = async (nextUrl) => {
   try {
     const url = `${API}pokemon?limit=20&offset=0`;
-    const response = await fetch(url);
+    const response = await fetch(nextUrl || url);
     const result = await response.json()
     return result
   } catch (error) {
@@ -20,4 +20,14 @@ const getPokemonDetailAPI = async (url) => {
   }
 }
 
-export { getPokemonsAPI, getPokemonDetailAPI }
+const getPokemonDataAPI = async (id) => {
+  try {
+    const response = await fetch(`${API}/pokemon/${id}`);
+    const result = await response.json();
+    return result
+  } catch (error) {
+    throw error;
+  }
+}
+
+export { getPokemonsAPI, getPokemonDetailAPI, getPokemonDataAPI }
