@@ -70,6 +70,7 @@ const LoginForm = () => {
 const styles = StyleSheet.create({
   root: {
     padding: 24,
+    width: "100%",
   },
   title: {
     textAlign: "center",

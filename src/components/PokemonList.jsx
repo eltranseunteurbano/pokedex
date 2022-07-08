@@ -19,7 +19,7 @@ const PokemonList = (props) => {
           order={order}
         />
       )}
-      onEndReached={isNext ? loadPokemons : undefined}
+      onEndReached={isNext && loadPokemons}
       onEndReachedThreshold={1}
       ListFooterComponent={
         isNext && (

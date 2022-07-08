@@ -1,11 +1,4 @@
-import {
-  Text,
-  Image,
-  StyleSheet,
-  Pressable,
-  View,
-  ToastAndroid,
-} from "react-native";
+import { Text, Image, StyleSheet, Pressable, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { POKEDEX_POKEMON } from "../routes";
 import getColorByPokemonType from "../utils/getColorByPokemonType";

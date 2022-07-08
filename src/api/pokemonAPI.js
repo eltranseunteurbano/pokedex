@@ -30,4 +30,4 @@ const getPokemonDataAPI = async (id) => {
   }
 }
 
-export { getPokemonsAPI, getPokemonDetailAPI, getPokemonDataAPI }
+export { getPokemonsAPI, getPokemonDetailAPI, getPokemonDataAPI, API as POKEMON_API }

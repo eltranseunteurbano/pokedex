@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Text } from "react-native";
 import { getPokemonsAPI, getPokemonDetailAPI } from "../../api/pokemonAPI";
 import { PokemonList } from "../../components";
 
@@ -40,6 +40,7 @@ const Pokedex = () => {
 
   return (
     <SafeAreaView style={styles.root}>
+      <Text style={styles.title}>POKEMONS</Text>
       <PokemonList
         pokemons={pokemons}
         loadPokemons={loadPokemons}
@@ -52,6 +53,15 @@ const Pokedex = () => {
 const styles = StyleSheet.create({
   root: {
     padding: 16,
+  },
+  title: {
+    textTransform: "uppercase",
+    color: "#808080",
+    fontWeight: "bold",
+    letterSpacing: 4,
+    fontSize: 20,
+    marginVertical: 24,
+    paddingHorizontal: 8,
   },
 });
 export default Pokedex;

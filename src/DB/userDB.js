@@ -1,13 +1,13 @@
 const user = {
-  username: 'eltranseunte',
-  password: '123456'
+  username: 'a',
+  password: '1'
 }
 
 const userDetails = {
   username: 'eltranseunte',
   firstName: 'Jaime',
   latsName: 'Burbano',
-  email: 'burbanojaime98@gmail.com'
+  email: 'hi@jaimeburbano.com'
 }
 
 export { user, userDetails }

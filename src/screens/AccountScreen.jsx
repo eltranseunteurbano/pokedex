@@ -6,7 +6,12 @@ import useAuth from "../store/auth/useAuth";
 
 const Account = () => {
   const { auth, logout } = useAuth();
-  if (!auth) return <LoginForm />;
+  if (!auth)
+    return (
+      <SafeAreaView style={styles.root}>
+        <LoginForm />
+      </SafeAreaView>
+    );
 
   return (
     <SafeAreaView style={styles.root}>
