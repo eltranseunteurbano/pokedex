@@ -1,12 +1,15 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { MainNavigation } from './src/navigation';
+import AuthProvider from './src/store/auth/AuthContext';
 
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <MainNavigation />
-    </NavigationContainer>
+    <AuthProvider>
+      <NavigationContainer>
+        <MainNavigation />
+      </NavigationContainer>
+    </AuthProvider>
   );
 }
 

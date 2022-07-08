@@ -10,7 +10,7 @@ const AccountNavigation = () => {
       <Stack.Screen
         name={ACCOUNT.path}
         component={AccountScreen}
-        options={{ title: ACCOUNT.label }}
+        options={{ title: ACCOUNT.label, headerShown: false }}
       />
     </Stack.Navigator>
   );
