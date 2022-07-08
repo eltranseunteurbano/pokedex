@@ -15,10 +15,23 @@ const PokedexNavigation = () => {
       <Stack.Screen
         name={POKEDEX_POKEMON.path}
         component={PokemonScreen}
-        options={{ title: POKEDEX_POKEMON.label, headerShown: false }}
+        options={{
+          title: "",
+          headerShown: true,
+          headerTransparent: true,
+          headerTitleStyle: title,
+        }}
       />
     </Stack.Navigator>
   );
+};
+
+const title = {
+  textTransform: "uppercase",
+  color: "#fff",
+  fontWeight: "400",
+  letterSpacing: 4,
+  fontSize: 20,
 };
 
 export default PokedexNavigation;

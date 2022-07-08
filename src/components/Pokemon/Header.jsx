@@ -3,7 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import getColorByPokemonType from "../../utils/getColorByPokemonType";
 
 const Header = (props) => {
-  const { id, name, type, order, image } = props;
+  const { type, image } = props;
 
   return (
     <>
@@ -15,8 +15,8 @@ const Header = (props) => {
       />
       <SafeAreaView style={styles.content}>
         <View style={styles.header}>
-          <Text style={styles.title}>{name}</Text>
-          <Text style={styles.order}># {`${order}`.padStart(3, 0)}</Text>
+          {/* <Text style={styles.title}>{name}</Text> */}
+          {/* <Text style={styles.order}># {`${order}`.padStart(3, 0)}</Text> */}
         </View>
 
         <View style={styles.imgBox}>
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   },
   content: {
     marginHorizontal: 24,
-    marginTop: 24,
+    marginTop: 8 * 8,
   },
   header: {
     flexDirection: "row",
